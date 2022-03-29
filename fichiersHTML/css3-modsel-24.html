@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>:disabled pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">button { background-color : red }
+input { background-color : red }
+button:disabled { background-color : lime }
+input:disabled { background-color : lime }</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-23.html" title=":enabled pseudo-class">
+  <link rel="next" href="css3-modsel-25.html" title=":checked pseudo-class">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-23.html" title=":enabled pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-25.html" title=":checked pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">35 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:disabled pseudo-class (ID #24)</td>
+    <td class="a">2004-03-03</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p>
+ <button disabled="disabled">A button (disabled) with green background</button>
+ <br>
+ <input disabled="disabled" type="text" size="36" value="a text area (disabled) with green background">
+</p>
+</div>
+   <pre class="rules">button { background-color : red }
+input { background-color : red }
+button:disabled { background-color : lime }
+input:disabled { background-color : lime }</pre>
+   <pre class="rules">
+&lt;p&gt;
+ &lt;button disabled=&quot;disabled&quot;&gt;A button (disabled) with green background&lt;/button&gt;
+ &lt;br&gt;
+ &lt;input disabled=&quot;disabled&quot; type=&quot;text&quot; size=&quot;36&quot; value=&quot;a text area (disabled) with green background&quot;&gt;
+&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

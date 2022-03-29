@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>More than one class selector</title>
+  <meta name="author" content="Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">
+p { background: green; color: white; }
+.t1.fail { background: red; color: yellow; }
+.fail.t1 { background: red; color: yellow; }
+.t2.fail { background: red; color: yellow; }
+.fail.t2 { background: red; color: yellow; }
+/* Note: This is a valid test even per CSS1, since in CSS1 those rules
+         are invalid and should be dropped. */
+</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-14.html" title="More than one class selector">
+  <link rel="next" href="css3-modsel-14c.html" title="More than one class selector">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-14.html" title="More than one class selector">&lt;==</a>
+     Test #
+     <a href="css3-modsel-14c.html" title="More than one class selector">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">15 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">More than one class selector (ID #14b)</td>
+    <td class="a">2004-04-27</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+  <p class="t1">This line should be green.</p>
+  <p class="t1 t2">This line should be green.</p>
+</div>
+   <pre class="rules">
+p { background: green; color: white; }
+.t1.fail { background: red; color: yellow; }
+.fail.t1 { background: red; color: yellow; }
+.t2.fail { background: red; color: yellow; }
+.fail.t2 { background: red; color: yellow; }
+/* Note: This is a valid test even per CSS1, since in CSS1 those rules
+         are invalid and should be dropped. */
+</pre>
+   <pre class="rules">
+  &lt;p class=&quot;t1&quot;&gt;This line should be green.&lt;/p&gt;
+  &lt;p class=&quot;t1 t2&quot;&gt;This line should be green.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

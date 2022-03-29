@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>:last-of-type pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">.red { background-color : red }
+address { margin-bottom : 1em ; margin-left : 1em }
+address:last-of-type { background-color : lime }
+</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-34.html" title=":first-of-type pseudo-class">
+  <link rel="next" href="css3-modsel-36.html" title=":only-child pseudo-class">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-34.html" title=":first-of-type pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-36.html" title=":only-child pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">49 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:last-of-type pseudo-class (ID #35)</td>
+    <td class="a">2001-11-12</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<div>
+<address>A first address with normal background</address>
+<address>A second address with normal background</address>
+<address class="red">A third address that should have a green background</address>
+This div contains 3 addresses above this sentence.</div>
+</div>
+   <pre class="rules">.red { background-color : red }
+address { margin-bottom : 1em ; margin-left : 1em }
+address:last-of-type { background-color : lime }
+</pre>
+   <pre class="rules">
+&lt;div&gt;
+&lt;address&gt;A first address with normal background&lt;/address&gt;
+&lt;address&gt;A second address with normal background&lt;/address&gt;
+&lt;address class=&quot;red&quot;&gt;A third address that should have a green background&lt;/address&gt;
+This div contains 3 addresses above this sentence.&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

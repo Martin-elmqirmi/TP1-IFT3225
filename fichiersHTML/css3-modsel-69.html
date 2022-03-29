@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>NEGATED :disabled pseudo-class</title>
+  <meta name="author" content="Daniel Glazman">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">button { background-color : red }
+input { background-color : red }
+button:not(:disabled) { background-color : lime }
+input:not(:disabled) { background-color : lime }</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-68.html" title="NEGATED :enabled pseudo-class">
+  <link rel="next" href="css3-modsel-70.html" title="NEGATED :checked pseudo-class">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-68.html" title="NEGATED :enabled pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-70.html" title="NEGATED :checked pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">86 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED :disabled pseudo-class (ID #69)</td>
+    <td class="a">2004-03-03</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p>
+ <button>A button (enabled) with green background</button>
+ <br>
+ <input type="text" size="36" value="a text area (enabled) with green background">
+</p>
+</div>
+   <pre class="rules">button { background-color : red }
+input { background-color : red }
+button:not(:disabled) { background-color : lime }
+input:not(:disabled) { background-color : lime }</pre>
+   <pre class="rules">
+&lt;p&gt;
+ &lt;button&gt;A button (enabled) with green background&lt;/button&gt;
+ &lt;br&gt;
+ &lt;input type=&quot;text&quot; size=&quot;36&quot; value=&quot;a text area (enabled) with green background&quot;&gt;
+&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

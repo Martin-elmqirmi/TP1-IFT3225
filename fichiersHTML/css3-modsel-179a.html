@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>::first-line after &lt;br&gt;</title>
+  <meta name="author" content="Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">
+  p { color: green; }
+  p:first-line { background: red; color: yellow; font-size: 4em; }
+  p::first-line { background: red; color: yellow; font-size: 4em; }
+</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-179.html" title="::first-line on inlines">
+  <link rel="next" href="css3-modsel-180a.html" title="::first-letter after &lt;br&gt;">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-179.html" title="::first-line on inlines">&lt;==</a>
+     Test #
+     <a href="css3-modsel-180a.html" title="::first-letter after &lt;br&gt;">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">159 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">::first-line after &lt;br&gt; (ID #179a)</td>
+    <td class="a">2004-02-29</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+   <p><br>This line should be green.</p>
+</div>
+   <pre class="rules">
+  p { color: green; }
+  p:first-line { background: red; color: yellow; font-size: 4em; }
+  p::first-line { background: red; color: yellow; font-size: 4em; }
+</pre>
+   <pre class="rules">
+   &lt;p&gt;&lt;br&gt;This line should be green.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

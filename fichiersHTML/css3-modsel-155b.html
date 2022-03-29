@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>Syntax and parsing</title>
+  <meta name="author" content="Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">
+  p { background: lime; }
+  .two\ words { background: red; }
+
+  /* the "." and "~=" forms match on a space separated list of words.
+  In such a list, a word containing a space can never match, since it
+  would by definition be two words. */
+
+</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-155a.html" title="Syntax and parsing">
+  <link rel="next" href="css3-modsel-155c.html" title="Syntax and parsing">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-155a.html" title="Syntax and parsing">&lt;==</a>
+     Test #
+     <a href="css3-modsel-155c.html" title="Syntax and parsing">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">127 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Syntax and parsing (ID #155b)</td>
+    <td class="a">2001-11-27</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+ <p class="two words">This line should have a green background.</p>
+</div>
+   <pre class="rules">
+  p { background: lime; }
+  .two\ words { background: red; }
+
+  /* the &quot;.&quot; and &quot;~=&quot; forms match on a space separated list of words.
+  In such a list, a word containing a space can never match, since it
+  would by definition be two words. */
+
+</pre>
+   <pre class="rules">
+ &lt;p class=&quot;two words&quot;&gt;This line should have a green background.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

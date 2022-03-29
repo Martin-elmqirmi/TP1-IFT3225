@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>Dynamic updating of :first-child and :last-child</title>
+  <meta name="author" content="Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">
+   #two:first-child { background: red; }
+   #three:last-child { background: lime; }
+</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-d2.html" title="Dynamic handling of combinators">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-d2.html" title="Dynamic handling of combinators">&lt;==</a>
+     Test #
+     ==&gt;
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">172 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Dynamic updating of :first-child and :last-child (ID #d4)</td>
+    <td class="a">2004-03-03</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support ECMA-262 and DOM Level 2 Core for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+
+ <div>
+
+  <script type="text/javascript">
+   
+
+    function test() {
+      el2 = document.getElementById('two');
+      el3 = document.getElementById('three');
+      el2.parentNode.insertBefore(el3.nextSibling, el2);
+    }
+
+    window.setTimeout("test()", 100);
+   
+  </script>
+
+  <div><p id="two">This line should be unstyled. (2)</p><p id="three">This line should have a green background. (3)</p><p>This line should be unstyled. (4 moving to 1)</p></div>
+
+ </div>
+
+</div>
+   <pre class="rules">
+   #two:first-child { background: red; }
+   #three:last-child { background: lime; }
+</pre>
+   <pre class="rules">
+
+ &lt;div&gt;
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+   
+
+    function test() {
+      el2 = document.getElementById(&#39;two&#39;);
+      el3 = document.getElementById(&#39;three&#39;);
+      el2.parentNode.insertBefore(el3.nextSibling, el2);
+    }
+
+    window.setTimeout(&quot;test()&quot;, 100);
+   
+  &lt;/script&gt;
+
+  &lt;div&gt;&lt;p id=&quot;two&quot;&gt;This line should be unstyled. (2)&lt;/p&gt;&lt;p id=&quot;three&quot;&gt;This line should have a green background. (3)&lt;/p&gt;&lt;p&gt;This line should be unstyled. (4 moving to 1)&lt;/p&gt;&lt;/div&gt;
+
+ &lt;/div&gt;
+
+</pre>
+  </div>
+ </body>
+</html>

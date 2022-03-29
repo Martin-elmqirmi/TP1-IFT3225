@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>Syntax and parsing of class selectors</title>
+  <meta name="author" content="Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">
+p { color: green; }
+..test { background: red; color: yellow; }
+.foo..quux { background: red; color: yellow; }
+.bar. { background: red; color: yellow; }
+</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-181.html" title="Case sensitivity">
+  <link rel="next" href="css3-modsel-184a.html" title="Ends-with attribute selector with empty value">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-181.html" title="Case sensitivity">&lt;==</a>
+     Test #
+     <a href="css3-modsel-184a.html" title="Ends-with attribute selector with empty value">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">162 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Syntax and parsing of class selectors (ID #183)</td>
+    <td class="a">2004-04-24</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p class="test">This text should be green.</p>
+<p class=".test">This text should be green.</p>
+<p class="foo">This text should be green.</p>
+<p class="foo quux">This text should be green.</p>
+<p class="foo  quux">This text should be green.</p>
+<p class=" bar ">This text should be green.</p>
+</div>
+   <pre class="rules">
+p { color: green; }
+..test { background: red; color: yellow; }
+.foo..quux { background: red; color: yellow; }
+.bar. { background: red; color: yellow; }
+</pre>
+   <pre class="rules">
+&lt;p class=&quot;test&quot;&gt;This text should be green.&lt;/p&gt;
+&lt;p class=&quot;.test&quot;&gt;This text should be green.&lt;/p&gt;
+&lt;p class=&quot;foo&quot;&gt;This text should be green.&lt;/p&gt;
+&lt;p class=&quot;foo quux&quot;&gt;This text should be green.&lt;/p&gt;
+&lt;p class=&quot;foo  quux&quot;&gt;This text should be green.&lt;/p&gt;
+&lt;p class=&quot; bar &quot;&gt;This text should be green.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

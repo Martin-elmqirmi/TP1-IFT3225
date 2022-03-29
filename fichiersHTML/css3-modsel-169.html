@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>:after with ::after</title>
+  <meta name="author" content="Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">
+  span:after { background-color: red; content: 'FAILED'; }
+  span::after { background-color: lime; content: 'PASSED'; }
+</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-168a.html" title=":before with ::before">
+  <link rel="next" href="css3-modsel-169a.html" title=":after with ::after">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-168a.html" title=":before with ::before">&lt;==</a>
+     Test #
+     <a href="css3-modsel-169a.html" title=":after with ::after">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">144 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:after with ::after (ID #169)</td>
+    <td class="a">2001-01-01</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+   <p>This test has <span></span>.</p>
+   <p>(If the previous line just reads &quot;This test has .&quot; then this test has failed.)</p>  
+</div>
+   <pre class="rules">
+  span:after { background-color: red; content: &#39;FAILED&#39;; }
+  span::after { background-color: lime; content: &#39;PASSED&#39;; }
+</pre>
+   <pre class="rules">
+   &lt;p&gt;This test has &lt;span&gt;&lt;/span&gt;.&lt;/p&gt;
+   &lt;p&gt;(If the previous line just reads &amp;quot;This test has .&amp;quot; then this test has failed.)&lt;/p&gt;  
+</pre>
+  </div>
+ </body>
+</html>

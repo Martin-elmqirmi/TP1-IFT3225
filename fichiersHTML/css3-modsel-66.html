@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>NEGATED :target pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">p { background-color: navy; color: white; }
+p:not(:target) { background-color: white; color: black; }</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-65.html" title="NEGATED :focus pseudo-class">
+  <link rel="next" href="css3-modsel-66b.html" title="NEGATED :target pseudo-class">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-65.html" title="NEGATED :focus pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-66b.html" title="NEGATED :target pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">82 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED :target pseudo-class (ID #66)</td>
+    <td class="a">2005-08-30</td>
+    <td class="a">1.2</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: User interaction is required for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<p id="first">This paragraph should be unstyled.
+       The background of the following paragraph should become blue when
+       you follow <a href="#second">this link</a>.</p>
+<p id="second">This paragraph should initially be unstyled.
+       It should become blue when you select the link above. When you select
+       <a href="#third">this link</a>, it should return to being unstyled and the 
+       background of the paragraph below should become blue.</p>
+<p id="third">This paragraph should initially be unstyled.
+       It should become blue when you select the link above. When you follow
+       <a href="#missing">this link</a>, the three paragraphs
+       should all return to being unstyled.</p>
+</div>
+   <pre class="rules">p { background-color: navy; color: white; }
+p:not(:target) { background-color: white; color: black; }</pre>
+   <pre class="rules">
+&lt;p id=&quot;first&quot;&gt;This paragraph should be unstyled.
+       The background of the following paragraph should become blue when
+       you follow &lt;a href=&quot;#second&quot;&gt;this link&lt;/a&gt;.&lt;/p&gt;
+&lt;p id=&quot;second&quot;&gt;This paragraph should initially be unstyled.
+       It should become blue when you select the link above. When you select
+       &lt;a href=&quot;#third&quot;&gt;this link&lt;/a&gt;, it should return to being unstyled and the 
+       background of the paragraph below should become blue.&lt;/p&gt;
+&lt;p id=&quot;third&quot;&gt;This paragraph should initially be unstyled.
+       It should become blue when you select the link above. When you follow
+       &lt;a href=&quot;#missing&quot;&gt;this link&lt;/a&gt;, the three paragraphs
+       should all return to being unstyled.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

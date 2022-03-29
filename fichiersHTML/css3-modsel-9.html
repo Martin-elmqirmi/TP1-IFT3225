@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>Substring matching attribute selector (beginning)</title>
+  <meta name="author" content="Daniel Glazman">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">p { background-color : red }
+p[title^="foo"] { background-color : lime }</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-8.html" title="Attribute value selectors (hyphen-separated attributes)">
+  <link rel="next" href="css3-modsel-10.html" title="Substring matching attribute selector (end)">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-8.html" title="Attribute value selectors (hyphen-separated attributes)">&lt;==</a>
+     Test #
+     <a href="css3-modsel-10.html" title="Substring matching attribute selector (end)">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">10 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Substring matching attribute selector (beginning) (ID #9)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p title="foobar">This paragraph should have a green background<br>
+because its title attribute begins with &quot;foo&quot;</p>
+</div>
+   <pre class="rules">p { background-color : red }
+p[title^=&quot;foo&quot;] { background-color : lime }</pre>
+   <pre class="rules">
+&lt;p title=&quot;foobar&quot;&gt;This paragraph should have a green background&lt;br&gt;
+because its title attribute begins with &amp;quot;foo&amp;quot;&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

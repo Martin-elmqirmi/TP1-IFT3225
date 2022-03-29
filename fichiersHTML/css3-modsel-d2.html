@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>Dynamic handling of combinators</title>
+  <meta name="author" content="Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">
+   #test { background: red; display: block; padding: 1em; }
+   #stub ~ div div + div > div { background: lime; }
+</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-d1b.html" title="Dynamic handling of :empty">
+  <link rel="next" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-d1b.html" title="Dynamic handling of :empty">&lt;==</a>
+     Test #
+     <a href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">171 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Dynamic handling of combinators (ID #d2)</td>
+    <td class="a">2004-03-03</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support ECMA-262 and DOM Level 2 Core for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+
+ <div>
+
+  
+
+  
+  <script type="text/javascript">
+   
+
+    function test() {
+      el = document.getElementById('test');
+      el.parentNode.parentNode.insertBefore(document.createElement('div'), el.parentNode);
+    }
+
+    window.setTimeout("test()", 100);
+   
+  </script>
+  
+
+  <p> The following bar should be green. </p>
+
+  <div id="stub"></div>
+  <div></div>
+  <div><div><!-- <div/> --><div><div id="test"></div></div></div></div>
+
+ </div>
+
+</div>
+   <pre class="rules">
+   #test { background: red; display: block; padding: 1em; }
+   #stub ~ div div + div &gt; div { background: lime; }
+</pre>
+   <pre class="rules">
+
+ &lt;div&gt;
+
+  
+
+  
+  &lt;script type=&quot;text/javascript&quot;&gt;
+   
+
+    function test() {
+      el = document.getElementById(&#39;test&#39;);
+      el.parentNode.parentNode.insertBefore(document.createElement(&#39;div&#39;), el.parentNode);
+    }
+
+    window.setTimeout(&quot;test()&quot;, 100);
+   
+  &lt;/script&gt;
+  
+
+  &lt;p&gt; The following bar should be green. &lt;/p&gt;
+
+  &lt;div id=&quot;stub&quot;&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;div&gt;&lt;!-- &lt;div/&gt; --&gt;&lt;div&gt;&lt;div id=&quot;test&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+ &lt;/div&gt;
+
+</pre>
+  </div>
+ </body>
+</html>

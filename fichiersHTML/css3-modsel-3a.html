@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>Universal selector (no namespaces)</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">* { color : lime }
+ul, p { color : red }
+*.t1 { color : lime }
+</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-2.html" title="Type element selectors">
+  <link rel="next" href="css3-modsel-4.html" title="Omitted universal selector">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-2.html" title="Type element selectors">&lt;==</a>
+     Test #
+     <a href="css3-modsel-4.html" title="Omitted universal selector">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">3 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Universal selector (no namespaces) (ID #3a)</td>
+    <td class="a">2003-11-03</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p>
+<span class="t1">This paragraph, and all textual contents in the document, 
+      should be green.</span>
+</p>
+<ul>
+  <li class="t1">This item should be green.</li>
+</ul>
+</div>
+   <pre class="rules">* { color : lime }
+ul, p { color : red }
+*.t1 { color : lime }
+</pre>
+   <pre class="rules">
+&lt;p&gt;
+&lt;span class=&quot;t1&quot;&gt;This paragraph, and all textual contents in the document, 
+      should be green.&lt;/span&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li class=&quot;t1&quot;&gt;This item should be green.&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>More than one class selector</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">p { background-color : red ; border : thick solid red ; padding : 1em }
+p.t1 { background-color : lime }
+p.t2 { border : thick solid green }
+
+div { background: green; color: white; }
+div.teST { background: red; color: yellow; }
+div.te { background: red; color: yellow; }
+div.st { background: red; color: yellow; }
+div.te.st { background: red; color: yellow; }</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-13.html" title="Class selectors">
+  <link rel="next" href="css3-modsel-14b.html" title="More than one class selector">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-13.html" title="Class selectors">&lt;==</a>
+     Test #
+     <a href="css3-modsel-14b.html" title="More than one class selector">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">14 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">More than one class selector (ID #14)</td>
+    <td class="a">2003-06-22</td>
+    <td class="a">1.2</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+
+<p class="t1 t2">This paragraph
+should have a green background and a green thick solid border because
+it carries both classes t1 and t2.</p>
+
+<div class="test">This line
+should be green.</div>
+
+</div>
+   <pre class="rules">p { background-color : red ; border : thick solid red ; padding : 1em }
+p.t1 { background-color : lime }
+p.t2 { border : thick solid green }
+
+div { background: green; color: white; }
+div.teST { background: red; color: yellow; }
+div.te { background: red; color: yellow; }
+div.st { background: red; color: yellow; }
+div.te.st { background: red; color: yellow; }</pre>
+   <pre class="rules">
+
+&lt;p class=&quot;t1 t2&quot;&gt;This paragraph
+should have a green background and a green thick solid border because
+it carries both classes t1 and t2.&lt;/p&gt;
+
+&lt;div class=&quot;test&quot;&gt;This line
+should be green.&lt;/div&gt;
+
+</pre>
+  </div>
+ </body>
+</html>

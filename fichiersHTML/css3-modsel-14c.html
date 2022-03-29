@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+ <head>
+  <title>More than one class selector</title>
+  <meta name="author" content="Ian Hickson">
+  <link rel="stylesheet" type="text/css" href="../../../style/html-full.css">
+  <style type="text/css">
+p { background: red; color: yellow; }
+p.t1.t2 { background: green; color: white; }
+div { background: green; color: white; }
+div.t1 { background: red; color: yellow; }
+address { background: red; color: yellow; }
+address.t5.t5 { background: green; color: white; }
+</style>
+  <link rel="first" href="css3-modsel-1.html" title="Groups of selectors">
+  <link rel="prev" href="css3-modsel-14b.html" title="More than one class selector">
+  <link rel="next" href="css3-modsel-14d.html" title="NEGATED More than one class selector">
+  <link rel="last" href="css3-modsel-d4.html" title="Dynamic updating of :first-child and :last-child">
+  <link rel="up" href="./index.html">
+  <link rel="top" href="../../../index.html">
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-14b.html" title="More than one class selector">&lt;==</a>
+     Test #
+     <a href="css3-modsel-14d.html" title="NEGATED More than one class selector">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">16 of 172</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">More than one class selector (ID #14c)</td>
+    <td class="a">2002-12-06</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+  <p class="t1 t2">This line should be green.</p>
+  <div class="t3">This line should be green.</div>
+  <address class="t4 t5 t6">This line should be green.</address>
+</div>
+   <pre class="rules">
+p { background: red; color: yellow; }
+p.t1.t2 { background: green; color: white; }
+div { background: green; color: white; }
+div.t1 { background: red; color: yellow; }
+address { background: red; color: yellow; }
+address.t5.t5 { background: green; color: white; }
+</pre>
+   <pre class="rules">
+  &lt;p class=&quot;t1 t2&quot;&gt;This line should be green.&lt;/p&gt;
+  &lt;div class=&quot;t3&quot;&gt;This line should be green.&lt;/div&gt;
+  &lt;address class=&quot;t4 t5 t6&quot;&gt;This line should be green.&lt;/address&gt;
+</pre>
+  </div>
+ </body>
+</html>
